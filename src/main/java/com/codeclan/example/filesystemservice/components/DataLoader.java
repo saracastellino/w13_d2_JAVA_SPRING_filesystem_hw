@@ -16,7 +16,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
     private FileRepository fileRepository;
+    @Autowired
     private FolderRepository folderRepository;
 
     public void run(ApplicationArguments args){
@@ -30,9 +32,9 @@ public class DataLoader implements ApplicationRunner {
         Folder admin = new Folder("Admin", tony);
         folderRepository.save(admin);
         Folder devOps = new Folder("DevOps", tony);
-        folderRepository.save(admin);
+        folderRepository.save(devOps);
         Folder pictures = new Folder("Pictures", tony);
-        folderRepository.save(admin);
+        folderRepository.save(pictures);
 
         File file1 = new File("file1", "doc", 333, admin);
         fileRepository.save(file1);

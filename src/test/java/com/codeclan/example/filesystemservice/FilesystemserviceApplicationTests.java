@@ -29,9 +29,6 @@ class FilesystemserviceApplicationTests {
 		File file = new File("file", "jpeg", 333, folder);
 
 		user.addFolder(folder);
-		userRepository.save(user);
-
 		folder.addFile(file);
-		folderRepository.save(folder);
 	}
 }

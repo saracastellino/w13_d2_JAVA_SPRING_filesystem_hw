@@ -31,6 +31,9 @@ public class Folder {
         this.files = new ArrayList<>();
     }
 
+    public Folder() {
+    }
+
     public Long getId() {
         return id;
     }
