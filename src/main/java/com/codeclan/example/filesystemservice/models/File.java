@@ -1,5 +1,7 @@
 package com.codeclan.example.filesystemservice.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ public class File {
     @Column
     private int size;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
